@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./components/Button/Button";
+import Buttons from "./components/changeButtons";
+import Input from "./components/Input/Input";
+import List from "./components/List/List";
+
+const todos = [
+  {
+      title: 'Go to School!',
+      isCompleted: false
+  },
+  {
+      title: 'Buy milk!',
+      isCompleted: true
+  },
+  {
+      title: 'Drive a Car!',
+      isCompleted: false
+  },
+]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Button color={'red'} width={'200px'} fontSize={'15px'}/>
+     <Input border={'5px solid green'} backgroundColor={'aqua'} color={'gray'} />
+     <List data={todos}/>
+     <Buttons />
+     
     </div>
   );
 }
